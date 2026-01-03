@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Relatório Diário</title>
+</head>
+<body onload="window.print()">
+
+<h2>Relatório de Motos - Hoje</h2>
+
+<table border="1" width="100%">
+<tr>
+    <th>Placa</th>
+    <th>Modelo</th>
+    <th>Mecânico</th>
+    <th>Serviço</th>
+    <th>Entrada</th>
+    <th>Saída</th>
+</tr>
+
+{% for m in motos %}
+<tr>
+    <td>{{ m[1] }}</td>
+    <td>{{ m[2] }}</td>
+    <td>{{ m[3] }}</td>
+    <td>{{ m[4] }}</td>
+    <td>{{ m[5] }}</td>
+    <td>{{ m[6] }}</td>
+</tr>
+{% endfor %}
+</table>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>Motos finalizadas hoje</h3>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Placa</th>
+        <th>Modelo</th>
+        <th>Mecânico</th>
+        <th>Serviço</th>
+        <th>Entrada</th>
+        <th>Saída</th>
+    </tr>
+
+    {% for m in motos %}
+    <tr>
+        <td>{{ m[1] }}</td>
+        <td>{{ m[2] }}</td>
+        <td>{{ m[3] }}</td>
+        <td>{{ m[4] }}</td>
+        <td>{{ m[5] }}</td>
+        <td>{{ m[6] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
