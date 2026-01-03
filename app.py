@@ -64,10 +64,12 @@ def index():
         conn.commit()
 
     cur.execute("""
-        SELECT * FROM motos
-        WHERE status = 'aberto'
-        ORDER BY hora_entrada
-    """)
+    SELECT *
+    FROM motos
+    WHERE saida IS NULL
+    ORDER BY entrada DESC
+""")
+
     motos = cur.fetchall()
 
     cur.close()
